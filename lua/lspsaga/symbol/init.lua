@@ -168,6 +168,8 @@ function symbol:register_module()
       end
 
       local client = lsp.get_client_by_id(args.data.client_id)
+      print(string.format('hi dave: s', vim.inspect(args)))
+
       if not client.supports_method('textDocument/documentSymbol') then
         return
       end
